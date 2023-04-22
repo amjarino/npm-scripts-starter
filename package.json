@@ -1,13 +1,57 @@
 {
-  "name": "amjarmed",
+  "name": "npm-scripts-starter",
   "version": "1.0.0",
-  "description": "",
+  "description": "A minimalistic starter kit for front-end development using only npm-scripts, with added support for Bootstrap, jQuery, Font Awesome, CSS animations, PWA, and icons. Includes scripts for Sass compilation, JavaScript bundling, image optimization, and file watching. Flexible and customizable using the package.json file. Perfect for developers who prefer a lightweight build system that relies only on the standard tools and features of npm, but also want to use popular front-end frameworks and libraries. resources/css/",
   "main": "index.js",
   "scripts": {
-    "start": "npm run  minify",
-    "cssmin": "cleancss -o dist/css/styles.min.css dist/css/styles.css",
-    "uglify": "uglifyjs -o dist/js/scripts.min.js dist/js/scripts.js"
+    "build": "npm-run-all build:*",
+    "build:css": "concat-cli -f resources/css/*.css -o dist/main.css && postcss dist/main.css -o dist/main.min.css",
+    "build:js": "uglifyjs resources/js/main.js -o dist/main.min.js",
+    "build:img": "imagemin resources/images/* -o dist/images",
+    "move:files": "mkdir -p dist && cp *.html dist && cp -r global/fonts dist",
+    "start": "live-server dist --port=3000 --entry-file=index.html",
+    "watch": "npm-run-all --parallel watch:*",
+    "watch:css": "onchange 'resources/css/*.css' -- npm run build:css",
+    "watch:js": "onchange 'resources/js/*.js' -- npm run build:js",
+    "watch:img": "onchange 'resources/images/*' -- npm run build:img",
+    "watch:files": "onchange '*.html' -- npm run move:files"
   },
-  "author": "",
-  "license": "ISC"
+  "author": "amjarmed",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "jquery": "^3.6.0",
+    "lodash": "^4.17.21"
+  },
+  "devDependencies": {
+    "concat-css": "^0.1.7",
+    "concat-js": "^0.1.7",
+    "imagemin-cli": "^7.0.0",
+    "live-server": "^1.2.1",
+    "npm-run-all": "^4.1.5",
+    "onchange": "^3.3.0",
+    "postcss-cli": "^8.3.1",
+    "rimraf": "^3.0.2",
+    "uglify-js": "^3.14.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/amjarino/npm-scripts-starter.git"
+  },
+  "keywords": [
+    "npm",
+    "pwa",
+    "npm-package",
+    "starter-template",
+    "learn-to-code",
+    "startup",
+    "starter-kit",
+    "npm-scripts",
+    "animatecss",
+    "starter-project"
+  ],
+  "bugs": {
+    "url": "https://github.com/amjarino/npm-scripts-starter/issues"
+  },
+  "homepage": "https://amjarmed.com"
 }

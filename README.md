@@ -4,6 +4,32 @@ A minimalistic starter kit for front-end development using only npm-scripts, wit
 
 ## Installation
 
+To install this package, run the following command:
+
+```bash
+npm i npm-scripts-starter
+```
+
+## Dependencies
+
+To install the dependencies, run the following command:
+
+```
+npm install
+```
+
+## Usage
+
+To start using the scripts provided by this package, run the following command:
+
+```
+npm run start
+```
+
+This will run the script that concatenates and minifies CSS and JavaScript, minifies images, moves everything to a production folder, starts a live server, and watches for changes. You can customize this script by editing the `package.json` file.
+
+## clone the repository
+
 To get started, clone the repository and install the dependencies:
 
 ```
