@@ -1,0 +1,14 @@
+/* NPM SCRIPTS STARTER  STYLE FOR INDEX.HTML REMOVE THEM ALL */
+/* classes */
+:root {
+  -60--color: #333;
+  -30--color: #fff;
+  --10--color: #521;
+}
+body {
+  background-color: #dfdee6;
+  min-height: 100vh;
+}
+.h-100-vh {
+  min-height: 100vh;
+}

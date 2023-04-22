@@ -1,9 +1,7 @@
-
 # npm-scripts-starter
 
-This repository is a starter template for front-end development using only npm scripts. It includes a basic directory structure and preconfigured npm scripts for building, testing, and deploying your project.
+A minimalistic starter kit for front-end development using only npm-scripts, with added support for Bootstrap, jQuery, Font Awesome, CSS animations, PWA, and icons. Includes scripts for Sass compilation, JavaScript bundling, image optimization, and file watching. Flexible and customizable using the package.json file. Perfect for developers who prefer a lightweight build system that relies only on the standard tools and features of npm, but also want to use popular front-end frameworks and libraries.
 
-A minimalistic starter kit for front-end development using only npm-scripts. Includes scripts for Sass compilation, JavaScript bundling, image optimization, and file watching. Flexible and customizable using the package.json file. Perfect for developers who prefer a lightweight build system that relies only on the standard tools and features of npm
 ## Installation
 
 To get started, clone the repository and install the dependencies:
